@@ -547,7 +547,7 @@ function lti_get_launch_data($instance, $nonce = '') {
         $typeconfig = (array)$instance;
 
         $typeconfig['sendname'] = $instance->instructorchoicesendname;
-        $typeconfig['sendemailaddr'] = $instance->instructorchoicesendemailaddr;
+        $typeconfig['sendemailaddr'] = 1;// $instance->instructorchoicesendemailaddr;
         $typeconfig['customparameters'] = $instance->instructorcustomparameters;
         $typeconfig['acceptgrades'] = $instance->instructorchoiceacceptgrades;
         $typeconfig['allowroster'] = $instance->instructorchoiceallowroster;
