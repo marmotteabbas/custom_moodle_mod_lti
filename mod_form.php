@@ -234,13 +234,14 @@ class mod_lti_mod_form extends moodleform_mod {
         $mform->setAdvanced('launchcontainer');
 
         if ($showoptions) {
-            $mform->addElement('text', 'resourcekey', get_string('resourcekey', 'lti'));
+            $mform->addElement('hidden', 'resourcekey', 'clf', array("id" => "id_resourcekey"));
+           /* $mform->addElement('text', 'resourcekey', get_string('resourcekey', 'lti'));
             $mform->setType('resourcekey', PARAM_TEXT);
             $mform->setAdvanced('resourcekey');
             $mform->addHelpButton('resourcekey', 'resourcekey', 'lti');
             $mform->setForceLtr('resourcekey');
             $mform->hideIf('resourcekey', 'typeid', 'in', $noncontentitemtypes);
-
+*/
             $mform->addElement('passwordunmask', 'password', get_string('password', 'lti'));
             $mform->setType('password', PARAM_TEXT);
             $mform->setAdvanced('password');
